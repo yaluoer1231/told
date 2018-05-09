@@ -47,9 +47,12 @@ public class Servant implements Runnable {
                 String MESG = ((ChatMessage) message).MESSAGE;
                 if (MESG.equals("time"))
                 {
-                    if (this.source.equals(message.getSource()))
+                    if (this.source != null)
+                    {
+                        if (this.source.equals(message.getSource()))
                         write(new ChatMessage("站長", "現在時間：「" + Time + "」"));
-                    else ;
+                    }
+
                 }
                 else
                     this.write(message);
