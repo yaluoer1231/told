@@ -44,7 +44,7 @@ public class ChatRoom implements Runnable {
                 switch (message.getType()){
                     case Message.CHAT:
                         String MESG = ((ChatMessage) message).MESSAGE;
-                        if (MESG.equals("time"))
+                        if (MESG.equals("time?"))
                         {
                             for (Servant servant : servants) {
                                 if (servant.source != null && servant.source.equals(message.getSource()))
